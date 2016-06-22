@@ -87,7 +87,7 @@ object Pociones {
     case (nombre, ingredientes) if todosLosEfectos(ingredientes).size >= 2 => nombre
   }
 
-  val nombreDePocionConFallback = nombreDePocionHeavy.orElse {
+  val nombreDePocionConFallback = nombreDePocionHeavy.orElse[Pocion, String] {
     case (nombre, _) => s"$nombre no es heavy"
   }
 

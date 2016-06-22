@@ -82,9 +82,9 @@ object Clase {
 
   def min(niveles: Niveles) = toList(niveles).min
 
-  val niveles: Persona => Niveles = persona._2
+  val niveles: Persona => Niveles = _._2
   
-  val sumaTodos: Persona=>Int =
+  val sumaPersonas: Persona=>Int =
     sumaTodos.compose(niveles)
 
 
